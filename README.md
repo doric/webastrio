@@ -5,10 +5,10 @@ Ce projet Symfony est une application CRUD simple pour la gestion de personnes, 
 Voici un bref aperçu du contenu du dépôt et de l'utilisation du code:
 
 Dossiers et fichiers
-src/: Ce dossier contient le code source du projet, notamment les contrôleurs, les entités et les services.
-config/: Ce dossier contient les fichiers de configuration du projet, y compris la configuration de la base de données et de routage.
-public/: Ce dossier contient les fichiers accessibles publiquement pour le projet, tels que les images, les fichiers CSS et JavaScript.
-openapi.yaml: Ce fichier contient la spécification OpenAPI pour le projet, y compris les points de terminaison pour créer, lire, mettre à jour et supprimer des personnes.
+ - src/: Ce dossier contient le code source du projet, notamment les contrôleurs, les entités et les services.
+ - config/: Ce dossier contient les fichiers de configuration du projet, y compris la configuration de la base de données et de routage.
+ - public/: Ce dossier contient les fichiers accessibles publiquement pour le projet, tels que les images, les fichiers CSS et JavaScript.
+ - openapi.yaml: Ce fichier contient la spécification OpenAPI pour le projet, y compris les points de terminaison pour créer, lire, mettre à jour et supprimer des personnes.
 Utilisation du code
 Pour utiliser le code, vous devrez cloner le dépôt et installer les dépendances à l'aide de Composer. Une fois que vous avez installé les dépendances, vous pouvez exécuter le projet en utilisant le serveur web intégré de Symfony en exécutant la commande symfony server:start.
 
