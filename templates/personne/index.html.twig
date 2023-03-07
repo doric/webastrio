@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Personne index{% endblock %}
+
+{% block body %}
+    <h1 class="text-center mb-4">Personne index</h1>
+
+    <table class="table table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Prenom</th>
+            <th scope="col">Date de naissance</th>
+            <th scope="col">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for personne in personnes %}
+            <tr>
+                <td>{{ personne.id }}</td>
+                <td>{{ personne.nom }}</td>
+                <td>{{ personne.prenom }}</td>
+                <td>{{ personne.dateNaissance ? personne.dateNaissance|date('Y-m-d') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_personne_show', {'id': personne.id}) }}" class="btn btn-primary btn-sm mr-1">Voir</a>
+                    <a href="{{ path('app_personne_edit', {'id': personne.id}) }}" class="btn btn-secondary btn-sm">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5" class="text-center">Aucun enregistrement trouvé.</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_personne_new') }}" class="btn btn-success">Ajouter une personne</a>
+{% endblock %}
