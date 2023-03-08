@@ -21,9 +21,9 @@ class Personne
     private ?string $prenom = null;
 
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="date", name="date_naissance")
      *
-     * @Assert\LessThanOrEqual("now -150 years", message="L'âge ne doit pas dépasser 150 ans")
+     * @Assert\GreaterThanOrEqual("now -150 years", message="L'âge ne doit pas dépasser 150 ans")
      */
     private ?\DateTimeInterface $dateNaissance = null;
 

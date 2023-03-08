@@ -7,7 +7,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\Validator\Constraints\LessThanOrEqual;
+use Symfony\Component\Validator\Constraints\GreaterThanOrEqual;
 
 class PersonneType extends AbstractType
 {
@@ -20,7 +20,7 @@ class PersonneType extends AbstractType
                 'widget' => 'single_text',
                 'format' => 'yyyy-MM-dd',
                 'constraints' => [
-                    new LessThanOrEqual('now -150 years'),
+                    new GreaterThanOrEqual('now -150 years'),
                 ],
             ]);
     }
